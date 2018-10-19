@@ -1,17 +1,22 @@
-{{!-- <img> --}}
+<div class="container">
+<div class="banner"><img src="/assets/img/burger.png">
 
 <h1>Eat-Da-Burger!</h1>
+</div>
+</div>
 
+<div class="container">
+<div class="column">
 <h2>Burgers to be devoured:</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#unless devoured}}
       <li>
 
-	{{name}}
+	{{burger_name}}
 
-        <button class="devour-it" data-id="{{id}}" data-newdevoured="{{devoured}}">
+        <button class="devour-it" data-id="{{id}}">
             Devour It!
         </button>
 
@@ -19,21 +24,23 @@
     {{/unless}}
   {{/each}}
 </ul>
-
+</div>
+<div class="column">
 <h2>Devoured Burgers:</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#if devoured}}
     <li>
 
-        {{name}}
+        {{burger_name}}
 
     </li>
     {{/if}}
   {{/each}}
 </ul>
-
+</div>
+</div>
 <h2>Add a Burger</h2>
 <form class="create-form">
 

@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.column {
+    flex-basis: 35%;
+}
+
+.banner {
+    margin: auto;
+}
